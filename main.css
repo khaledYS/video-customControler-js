@@ -1,0 +1,123 @@
+/* basics start here */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+/* basics ends here */
+
+.c-video{
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#video1{
+    max-width: 600px;
+    min-width: none;
+    width: 100%;
+    max-height: 100vh;
+}
+.controler-container{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #5a5a5ac4;
+    width: 100%;
+    transform: translateY(75%);
+    transition: all 0.4s cubic-bezier(1, 1, 1, 1);
+    color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 6vh;
+    z-index: 3;
+}
+#durationinput{
+    width: 100%;
+    opacity: 1;
+    cursor: pointer;
+    display: block;
+}
+
+.c-video:hover .controler-container, .controler-container:hover{
+    transform: translateY(0%);
+}
+.c-video:hover input[type="range"]::-webkit-slider-thumb{
+    background-color: #fbff00c4;
+}
+.btns-c{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+}
+.dur-c{
+    display: inline;
+}
+#play{
+    cursor: pointer;
+    font-size: 3vh;
+}
+#volumeimg{
+    height: 3vh;
+    width: 3vw;
+    display:flex;
+    position: relative;
+}
+#volume{
+    margin: 0;
+}
+
+input[type="range"]{
+    -webkit-appearance: none;
+    appearance: none;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+/* tracker */
+::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: .5vw; 
+    height: 3vh;
+    background: transparent;
+    box-shadow: -100vw 0 0 100vw #075b92;
+}
+
+::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #5a5a5ac4;
+    height: 2vh;
+    border: none;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+}
+.right{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3vh;
+}
