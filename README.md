@@ -1,2 +1,3 @@
 # video-customControler-js
-this is a lubrary of video custom Controler using js
+this is a library of video custom Controler using js
+
